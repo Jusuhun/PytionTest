@@ -18,6 +18,8 @@ import json
 import logging
 import re
 
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
 
 # 봇 토큰, 봇 API 주소
 TOKEN = '760055401:AAFIjpXhhIZTUadxn22PAhT-VdexvXpg-Uk'
