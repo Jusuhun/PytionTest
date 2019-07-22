@@ -2,6 +2,7 @@ import os
 import sys
 import ChatBotModel
 import openpyxl
+import Card
 from telegram.ext import Filters
 
 def funcname():
@@ -47,6 +48,7 @@ def get_text(bot, update):
         switch_text(update.message.text)
 
 def switch_text(text):
+	print(Card.HotCommand(text))
     if 'proc_hyundea_card' in alpaca.event_type:
         return make_report_hyundea_card(text)
 
